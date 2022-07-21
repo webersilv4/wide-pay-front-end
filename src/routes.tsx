@@ -4,12 +4,8 @@ import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import { isAuthenticated } from './utils/Authorization/Authorization';
 
 import Home from './Pages/Home/Home';
-// import Profile from './app/pages/profile';
-// import SignUp from './app/pages/account/signup';
-// import SignIn from './app/pages/account/signin';
-// import Dashboard from './app/pages/settings/profile';
-// import AccountSettings from './app/pages/settings/settings';
 import NotFound from './Pages/NotFound/NotFound';
+import Dashboard from './Pages/Dashboard/Dashboard';
 
 const PrivateRoute = (element) => {
     return  isAuthenticated() ? element : <Navigate to='/signin' />;
@@ -27,6 +23,10 @@ const Router = () => {
                 <Route 
                     path='/' 
                     element={ ProtectedRoute(<Home />) } />
+
+                <Route 
+                    path='/dashboard' 
+                    element={ PrivateRoute(<Dashboard />) } />
    
                 <Route 
                     path='/*' 
