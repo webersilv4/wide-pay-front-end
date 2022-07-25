@@ -11,6 +11,7 @@ api.interceptors.request.use(async config => {
 
     if (token !== null) {
         config.headers = {
+            'Content-Type': 'application/x-www-form-urlencoded',
             Authorization: `Bearer ${token}`
         };
     }

@@ -6,13 +6,14 @@ import { isAuthenticated } from './utils/Authorization/Authorization';
 import Home from './Pages/Home/Home';
 import NotFound from './Pages/NotFound/NotFound';
 import Dashboard from './Pages/Dashboard/Dashboard';
+import SignIn from './Pages/Account/SignIn';
 
 const PrivateRoute = (element) => {
     return  isAuthenticated() ? element : <Navigate to='/signin' />;
 };
 
 const ProtectedRoute = (element) => {
-    return  !isAuthenticated() ? element : <Navigate to='/settings/profile' />;
+    return  !isAuthenticated() ? element : <Navigate to='/dashboard' />;
 };
 
 const Router = () => {
@@ -27,6 +28,10 @@ const Router = () => {
                 <Route 
                     path='/dashboard' 
                     element={ PrivateRoute(<Dashboard />) } />
+
+                <Route 
+                    path='/signin' 
+                    element={ ProtectedRoute(<SignIn />) } />
    
                 <Route 
                     path='/*' 
