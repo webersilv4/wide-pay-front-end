@@ -4,7 +4,7 @@ import { api } from '../../Utils/Api/api';
 import qs from 'qs';
 
 import Input from '../../Components/Input';
-import { login } from '../../utils/Authorization/Authorization';
+import { login } from '../../Utils/Authorization/Authorization';
 import Alert from '../../Components/Alert';
 
 const SignIn = () => {
