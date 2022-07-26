@@ -7,6 +7,7 @@ import Home from './Pages/Home/Home';
 import NotFound from './Pages/NotFound/NotFound';
 import Dashboard from './Pages/Dashboard/Dashboard';
 import SignIn from './Pages/Account/SignIn';
+import SignUp from './Pages/Account/SignUp';
 
 const PrivateRoute = (element) => {
     return  isAuthenticated() ? element : <Navigate to='/signin' />;
@@ -32,6 +33,10 @@ const Router = () => {
                 <Route 
                     path='/signin' 
                     element={ ProtectedRoute(<SignIn />) } />
+
+                <Route 
+                    path='/signup' 
+                    element={ ProtectedRoute(<SignUp />) } />
    
                 <Route 
                     path='/*' 

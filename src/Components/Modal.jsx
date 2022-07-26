@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 import React from 'react';
 
-const Form = (props) => {
+const Modal = (props) => {
     return (
         <div className="modal fade" id={props.id} tabIndex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div className="modal-dialog">
@@ -23,4 +23,4 @@ const Form = (props) => {
     );
 };
 
-export default Form;
+export default Modal;

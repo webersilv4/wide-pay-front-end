@@ -159,8 +159,9 @@ const Dashboard = () => {
                     <Modal id={`update${key}`} title="Atualizar URL" element={
                         <>
                             <form onSubmit={handleUpdate}>
+                                <b>As URLS devem conter (http:// ou https://antes do endereço.)</b>
                                 <Input type="text" 
-                                    placeholder="Digite a URL" 
+                                    placeholder="Digite a URL Ex: (https://exemple.com)" 
                                     onChange={e => setNewUrl({id:element.id, url:e.target.value})} /> 
                                 <Input type="submit" />
                             </form>
@@ -176,8 +177,9 @@ const Dashboard = () => {
             <Modal id="add" title="ADD nova URL" element={
                 <>
                     <form onSubmit={handleNewUrl}>
+                        <b>As URLS devem conter (http:// ou https://antes do endereço.)</b>
                         <Input type="text" 
-                            placeholder="Digite a URL" 
+                            placeholder="Digite a URL Ex: (https://exemple.com)" 
                             onChange={e => setNewUrl({ url: e.target.value })} />
                         <Input type="submit" />
                     </form>

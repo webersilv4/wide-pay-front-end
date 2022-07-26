@@ -2,7 +2,12 @@ import React from 'react';
 
 const Home = () => {
     return (
-        <h1>Ola mundo</h1>
+        <>
+            <div className='jumbotron'>
+                <h1 className='text-center'>Seja Bem vindo(a)</h1>
+                
+            </div>
+        </>
     );
 };
 

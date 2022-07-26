@@ -1,5 +1,6 @@
 import validator from 'validator';
 
+
 export const TOKEN_KEY = '@token-user';
 
 export const isAuthenticated = () => {

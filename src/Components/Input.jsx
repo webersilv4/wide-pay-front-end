@@ -8,6 +8,8 @@ const Form = (props) => {
             name={props.name} 
             placeholder={props.placeholder}
             onChange={props.onChange}
+            className={props.className}
+            value={props.value}
         />
     );
 };
