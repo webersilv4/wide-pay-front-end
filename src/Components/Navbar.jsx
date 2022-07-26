@@ -6,7 +6,6 @@ import { isAuthenticated, logout } from '../Utils/Authorization/Authorization';
 const Navbar = () => {
     return (
         <ul className="nav justify-content-end pr-5 mb-5 border-bottom pb-3 mt-3">
-            
             <li className="nav-item">
                 {isAuthenticated() ? 
                     <a className="nav-link btn btn-danger" onClick={logout} href="/">Sair</a> 
