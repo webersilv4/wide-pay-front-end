@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
 import React from 'react';
-import { isAuthenticated, logout } from '../utils/Authorization/Authorization';
+import { isAuthenticated, logout } from '../Utils/Authorization/Authorization';
 
 
 const Navbar = () => {
