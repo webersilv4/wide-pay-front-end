@@ -22,7 +22,7 @@ const Dashboard = () => {
     const fetchData = async () => {
         await api.get('/render-urls')
             .then(response => { setResponse(response.data); })
-            .catch(error => setError(error.response.data.error) );
+            .catch(error => console.log(error) );
     };
 
     /*
@@ -48,7 +48,6 @@ const Dashboard = () => {
         await api.post('/new-url', qs.stringify(newUrl, { encode: false }))
             .then(response=>{
                 setsuccess(response.data.success);
-                console.log(response);
                 fetchData();
             }).catch(error=>{ setError(error.response.data.error); });
     };
@@ -63,7 +62,6 @@ const Dashboard = () => {
         await api.put('/alter-url', qs.stringify(newUrl, { encode: true }))
             .then(response=>{
                 setsuccess(response.data.success);
-                console.log(response);
                 fetchData();
             }).catch(error=>{ setError(error.response.data.error); });
     };

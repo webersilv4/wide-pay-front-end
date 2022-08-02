@@ -41,11 +41,6 @@ const Router = () => {
                 <Route 
                     path='/*' 
                     element={<NotFound />} />
-                
-                {/* Private Routes 
-                <Route 
-                    // path='/settings/profile' 
-                    // element={ PrivateRoute(<Dashboard />) } />*/}
 
             </Routes>
         </BrowserRouter>
